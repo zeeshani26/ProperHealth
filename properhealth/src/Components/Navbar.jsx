@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import icon from "../Data/Proper_icon.jpg";
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
                 fontWeight="400"
                 _hover={{ color: "#FF763F" }}
               >
-                Support
+                <Link to="/support">Support</Link>
               </Text>
             </Box>
             <Box>
@@ -57,15 +57,15 @@ const Navbar = () => {
                 <Link to="/about">About</Link>
               </Text>
             </Box>
-            <Box boxShadow="xl">
+            <Box width="20%" boxShadow="xl">
               <Button
-                width="120px"
+                width="100%"
                 border="1.5px solid #FF763F"
                 color="#FF763F"
                 backgroundColor="white"
                 fontSize="lg"
                 fontWeight="600"
-                _hover={{ color: "#FF763F" }}
+                _hover={{ backgroundColor: "#F3F3F3" }}
               >
                 <Link to="/login">Login</Link>
               </Button>
