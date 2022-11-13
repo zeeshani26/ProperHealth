@@ -1,0 +1,55 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "img": "https://cronometer.com/blog/wp-content/uploads/2022/04/Untitled-design-6.png",
+      "title": "Dietitians Discuss Diet And Eczema",
+      "date": "2022-04-27",
+      "type": "Nutrition",
+      "desc": "Registered Dietitians Discuss The Link Between Diet And Eczema Eczema is a common, chronic and complex skin disease that arises",
+      "data": "Eczema is a common, chronic and complex skin disease that arises as a result of interactions between genes and the environment (1). This inflammatory skin condition affects 15-20% of children and 1-3% of adults worldwide (2).  Erin Quense, Registered Dietitian Nutritionist says that the causes of eczema can vary from person to person and without a single pathology, no one diet can be found to cure it. However, links have been found between diet and keeping eczema symptoms under control.Quense says that although a lot of the research around diet and eczema has been inconclusive, a 2017 cross-sectional study found an association between junk food and increased severity and prevalence of eczema. The study also found that the most common patient-reported triggers were dairy, gluten, alcohol and sugar. More than half of the participants reported that eliminating flour, gluten, processed or high-fat foods led to positive outcomes (3)."
+    },
+    {
+      "id": 2,
+      "img": "https://cronometer.com/blog/wp-content/uploads/2022/04/IMG_7610-scaled.jpg",
+      "title": "How Can Diet & Nutrition Affect Acne",
+      "date": "2022-04-26",
+      "type": "Recipe",
+      "desc": "How Can Diet And Nutrition Affect Acne Acne is a chronic, multifactorial skin condition that is estimated to affect 9.4%",
+      "data": "Acne is a chronic, multifactorial skin condition that is estimated to affect 9.4% of the global population, putting it in the top ten most common diseases worldwide (1). With almost 10% of the global population suffering from acne at some point in their lifetime, it seems important to understand more about it. As there are many factors that can cause acne, emerging research shows that diet can play an important role. We spoke to several Registered Dietitians to discuss the relationship between diet and acne, what foods to eat, which ones to avoid and how nutrition tracking can help uncover foods that can cause flare ups in acne. Registered Dietitian at Exercise with Style, Kristin Gillespie says that there is certainly a link between diet and acne. Foods high in refined grains and sugars (high-glycemic index) and dairy products are most often associated with acne (2). This is believed to be related to the impact of these foods on blood sugar levels, as a result, circulating insulin levels."
+    },
+    {
+      "data": "Recent Cronometer research has indicated that up to 90% of our users aren’t taking advantage of our Custom Recipe functionality.If you’re among those users, we’re here to tell you why Custom Recipes are the way of your future! Read on to discover several hacks to make logging your meals into Cronometer easier than ever.\\nCustom Recipes allow you to save a combination of ingredients as one entry so you can log it to your diary in just a few taps. If you’re often eating the same thing, it’s time to create a recipe! Recipes are super handy for more complicated dinners like a casserole but also for simple things you tend to eat on a regular basis like a bagel with cream cheese and cucumbers. If you have a coffee with cream and sugar every morning, create a recipe so you only have to log the one entry.",
+      "date": "2022-09-14",
+      "desc": "Are You Taking Advantage Of Custom Recipes?",
+      "id": 3,
+      "img": "https://cronometer.com/blog/wp-content/uploads/2022/09/Blog-Img-Recipes.png",
+      "title": "How To: Create And Leverage Custom Recipes",
+      "type": "Features"
+    },
+    {
+      "data": "How do we love thee? Let us count the ways.\n\nWe love how multifaceted you are. There are endless taste possibilities to explore; sweet, salty, savoury, bitter, sweet AND savoury. Your diversity truly allows for a gastronomic experience.\n\nWe love your flexibility. You can be eaten at 5:00AM, you can be eaten at 11:00AM. Some restaurants even serve you all day! \n\nWe love that when we awaken that you’re one of the first things we think about. Is it because our stomachs are rumbling? Maybe. Is it because our coffee pots have automatic timers that wake us up to aromatic splendours? Quite possibly. Regardless the reason we love that feeling of anticipation to break fast.\n\nWhich is why it seemed silly to post anything BUT breakfast suggestions for this week’s recipe round up. \n\nWake up. Make some good stuff. Eat. Enjoy.",
+      "date": "2021-06-20",
+      "desc": "Dear Breakfast, How do we love thee? Let us count the ways. We love how multifaceted you are. There are endless taste possibilities to explore;",
+      "img": "https://cronometer.com/blog/wp-content/uploads/2019/06/jason-briscoe-1561462-unsplash-2.jpg",
+      "title": "Recipe Round Up: Breakfast",
+      "type": "Recipe",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "email": "zeeshan02679@gmail.com",
+      "password": "9211",
+      "id": 1
+    },
+    {
+      "email": "zeeshan02679@gmail.com",
+      "password": "9211",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,63 +1,13 @@
 import { Box, Button, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Components/Footer";
+import MobileApp from "../Components/MobileApp";
 
 export default function HomePage() {
   return (
     <Box>
-      <Flex margin="auto" mt="30px" justifyContent="center" ml="70px">
-        <Box width="30%">
-          <Image
-            loading="lazy"
-            width="95%"
-            src="https://i.ibb.co/N3cC995/cronometer-hero-graphic.png"
-            alt="ChronometerAppGraphic"
-          />
-        </Box>
-        <Box border="0px solid red" width="40%" marginLeft="45px">
-          <Box color="#4F4F52" textAlign="left" mt="32px">
-            <Heading size="2xl">Eat smarter.</Heading>
-            <Heading size="2xl">Live better.</Heading>
-          </Box>
-          <Box
-            border="0px solid blue"
-            width="90%"
-            color="#4F4F52"
-            marginTop="25px"
-          >
-            <Text textAlign="left" fontSize="3xl">
-              {/* Passed as array to make it responsice to screen change */}
-              Track your calories, exercise, biometrics and health data.
-            </Text>
-            <Box
-              marginTop="42px"
-              width="280px"
-              borderRadius="10px"
-              color="white"
-              backgroundColor="#FF763F"
-              fontSize="lg"
-              fontWeight="600"
-              pt="15px"
-              pb="15px"
-              _hover={{ boxShadow: "2xl", cursor: "pointer" }}
-            >
-              Sign Up - It's Free!
-            </Box>
-            <Box textAlign="left" mt="42px" color="#4F4F52">
-              <Text fontSize={["md", "lg", "xl", "xl"]}>
-                Already have an account?
-                <Button
-                  backgroundColor="white"
-                  fontSize="xl"
-                  _hover={{ color: "#FF763F", textDecoration: "underline" }}
-                >
-                  <Link to="/login">Log in.</Link>
-                </Button>
-              </Text>
-            </Box>
-          </Box>
-        </Box>
-      </Flex>
+      <MobileApp/>
       {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
       <Box m="auto" w="75%" mt="30px">
         <Text fontSize="2xl" textAlign="center">
@@ -403,7 +353,9 @@ export default function HomePage() {
             <Text fontSize="16px" fontWeight="600" mt="30px">
               iOS Review
             </Text>
-            <Text fontStyle="italic" fontSize="16px">September 23, 2019</Text>
+            <Text fontStyle="italic" fontSize="16px">
+              September 23, 2019
+            </Text>
           </Box>
         </Flex>
       </Box>
@@ -428,7 +380,9 @@ export default function HomePage() {
             <Text fontSize="16px" fontWeight="600" mt="30px">
               Android Review November 23, 2020
             </Text>
-            <Text fontStyle="italic" fontSize="16px">September 23, 2019</Text>
+            <Text fontStyle="italic" fontSize="16px">
+              September 23, 2019
+            </Text>
           </Box>
           <Box w="38%">
             <Text
@@ -453,7 +407,89 @@ export default function HomePage() {
           </Box>
         </Flex>
       </Box>
+      <Box mt="150px">
+        <Heading color="#4F4E53" fontSize="35.2px" fontWeight="700">
+          We are Canadian
+        </Heading>
+        <Text
+          mt="16px"
+          color="#4F4E53"
+          fontSize="22.56"
+          fontWeight="400"
+          lineHeight="33.84px"
+        >
+          Independently owned and operated by people who<br></br> care about
+          their users' nutrition.
+        </Text>
+      </Box>
+      <Box w="60%" margin="auto" marginTop="60px">
+        <Image
+          src="https://cdn1.cronometer.com/2021/landing/cronometer-staff-2-p-1600.jpeg"
+          alt="people"
+        ></Image>
+      </Box>
+      <Text
+        fontWeight="400px"
+        lineHeight="27px"
+        fontSize="18px"
+        textAlign="center"
+        mt="30px"
+        color="#404040"
+      >
+        Our headquarters are based in the idyllic mountain town of Revelstoke,
+        BC, Canada. We are a team of<br></br> over 25 professionals brought
+        together by a love of nutrition, skiing, biking and the great outdoors.
+      </Text>
+      <Box m="auto" boxShadow="xl" w="16%" mt="60px">
+        <Button
+          width="100%"
+          border="1.5px solid #FF763F"
+          color="#FF763F"
+          backgroundColor="white"
+          fontSize="20px"
+          fontWeight="600"
+          pt="24px"
+          pb="24px"
+          _hover={{ backgroundColor: "#F3F3F3" }}
+        >
+          <Link to="/about">About Us</Link>
+        </Button>
+      </Box>
+      <hr
+        style={{
+          backgroundColor: "#DBDBDB",
+          height: 1,
+          width: "70%",
+          margin: "auto",
+          marginTop: "50px",
+        }}
+      />
+      <Text
+        color="#4F4E53"
+        fontSize="22.56"
+        fontWeight="400"
+        lineHeight="33.84px"
+        mt="50px"
+      >
+        Help us spread the good word about nutrition and become an affiliate.
+      </Text>
+      <Box m="auto" boxShadow="xl" w="20%" mt="20px" mb="80px">
+        <Button
+          width="100%"
+          border="1.5px solid #FF763F"
+          color="#FF763F"
+          backgroundColor="white"
+          fontSize="20px"
+          fontWeight="600"
+          pt="24px"
+          pb="24px"
+          _hover={{ backgroundColor: "#F3F3F3" }}
+        >
+          <Link to="/">Become An Affiliate</Link>
+        </Button>
+      </Box>
       {/* END */}
+      <Footer />
     </Box>
   );
 }

@@ -1,23 +1,21 @@
 import React from "react";
 import {
   Box,
-  Flex,
-  Image,
-  Text,
-  Input,
-  VStack,
   Button,
+  Image,
+  VStack,
+  Input,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import myicon from "../Data/Proper_icon.jpg";
-import { useContext } from "react";
+import { AddUser } from "../api/api";
 import { AppContext } from "../Context/AppContextProvider";
+import { useContext } from "react";
 
-export default function Login() {
-  const value = useContext(AppContext);
+export default function Signup() {
   let navigate = useNavigate();
-  const { authState, handleLogin } = useContext(AppContext);
+  const { authState, handleSign } = useContext(AppContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,23 +23,20 @@ export default function Login() {
     email: "",
     password: "",
   });
-
+  console.log(authState);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user);
-    console.log(authState)
-    if (handleLogin(user) === true) {
-      alert("SIGN UP SUCCESSFUL");
-      navigate("/support");
-    }
-    else{
-      alert("Wrong Credentials. Please try again")
-    }
+    console.log(user);
+    const res = await AddUser(user);
+    console.log(res);
+    alert("SIGN UP SUCCESSFUL");
+    handleSign(user);
+    navigate("/login");
   };
 
   return (
@@ -54,11 +49,11 @@ export default function Login() {
           <VStack gap={"10px"} w={"100%"} m={"auto"}>
             <Input
               type="email"
+              name="email"
               required
               defaultValue={email}
               onChange={handleChange}
               placeholder="Enter Email Address"
-              name="email"
               height={"45px"}
             />
             <Input
@@ -82,20 +77,8 @@ export default function Login() {
               }}
               height="45px"
             >
-              Log In
+              Create Account
             </Button>
-
-            <VStack fontSize="17.5px">
-              <Flex>
-                Not a member?
-                <Text ml={"7px"} color="red">
-                  <Link to={"/signup"}>Sign Up Now </Link>
-                </Text>
-                <Text ml="60px" color="red">
-                  Forgot password?
-                </Text>
-              </Flex>
-            </VStack>
           </VStack>
         </form>
       </Box>
