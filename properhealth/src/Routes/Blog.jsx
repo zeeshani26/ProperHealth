@@ -1,18 +1,13 @@
-import React from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Text,
-  Heading,
-  InputGroup,
-  Input,
-  VStack,
-  InputRightAddon,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, InputGroup, Input } from "@chakra-ui/react";
+import { BlogList } from "../Components/BlogList";
+import { Search2Icon } from "@chakra-ui/icons";
+import { useState, useEffect } from "react";
+import MobileApp from "../Components/MobileApp";
+import Footer from "../Components/Footer";
 
 export const Blog = () => {
+  const [type, setType] = useState(null);
+
   return (
     <Box>
       <Box
@@ -54,11 +49,56 @@ export const Blog = () => {
           fontSize="21px"
         >
           {/* ADD FILTER HERE--------------------------------------------------------------------------------------------- */}
-          <Text>Nutrition</Text>
-          <Text>Fitness</Text>
-          <Text>Features</Text>
-          <Text>Recipe</Text>
-          <Text>App Updates</Text>
+          <Text
+            _hover={{
+              color: "teal.500",
+              textDecoration: "underline",
+            }}
+            style={{ cursor: "pointer" }}
+            onClick={() => setType("Nutrition")}
+          >
+            Nutrition
+          </Text>
+          <Text
+            _hover={{
+              color: "teal.500",
+              textDecoration: "underline",
+            }}
+            style={{ cursor: "pointer" }}
+            onClick={() => setType("Fitness")}
+          >
+            Fitness
+          </Text>
+          <Text
+            _hover={{
+              color: "teal.500",
+              textDecoration: "underline",
+            }}
+            style={{ cursor: "pointer" }}
+            onClick={() => setType("Features")}
+          >
+            Features
+          </Text>
+          <Text
+            _hover={{
+              color: "teal.500",
+              textDecoration: "underline",
+            }}
+            style={{ cursor: "pointer" }}
+            onClick={() => setType("Recipe")}
+          >
+            Recipe
+          </Text>
+          <Text
+            _hover={{
+              color: "teal.500",
+              textDecoration: "underline",
+            }}
+            style={{ cursor: "pointer" }}
+            onClick={() => setType(null)}
+          >
+            All
+          </Text>
           {/* ------------------------------------------------------------------------------------------------------------------ */}
         </Flex>
         <Box mt="20px" mb="20px">
@@ -71,10 +111,21 @@ export const Blog = () => {
               _placeholder={{ opacity: 1, color: "#80808C" }}
               boxShadow="xl"
             />
+            <Search2Icon
+              alignSelf={"center"}
+              cursor="pointer"
+              color="gray.500"
+              ml={"5px"}
+            ></Search2Icon>
           </InputGroup>
         </Box>
       </Flex>
       {/* map blog article component here */}
+      <BlogList type={type} />
+      <br />
+      <MobileApp />
+      <br/><br/>
+      <Footer />
     </Box>
   );
 };

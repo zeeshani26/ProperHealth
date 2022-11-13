@@ -1,7 +1,24 @@
+import { useState, useEffect } from "react";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import icon from "../Data/Proper_icon.jpg";
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContextProvider";
+
 const Navbar = () => {
+  const { authState } = useContext(AppContext);
+  const { isAuth, email } = authState;
+  const [status, setStatus] = useState("Login");
+
+  
+
+  useEffect(() => {
+    if (isAuth) {
+      setStatus(email);
+    }
+  }, []);
+
+  console.log("Info:", isAuth, email);
   return (
     <Box border="0px" width="90%" margin="auto">
       <Flex justifyContent="space-between" alignItems="center">
@@ -59,7 +76,7 @@ const Navbar = () => {
             </Box>
             <Box width="20%" boxShadow="xl">
               <Button
-                width="100%"
+                width="fit-content"
                 border="1.5px solid #FF763F"
                 color="#FF763F"
                 backgroundColor="white"
@@ -67,7 +84,7 @@ const Navbar = () => {
                 fontWeight="600"
                 _hover={{ backgroundColor: "#F3F3F3" }}
               >
-                <Link to="/login">Login</Link>
+                <Link to="/login">{status}</Link>
               </Button>
             </Box>
           </Flex>

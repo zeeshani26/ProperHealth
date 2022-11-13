@@ -1,17 +1,18 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Stack,
-  Input,
-  Text,
-  Heading,
-  Textarea,
-} from "@chakra-ui/react";
+import { Box, Text, Heading } from "@chakra-ui/react";
+import { AddBlog } from "../Components/AddBlog";
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContextProvider";
+import { Navigate } from "react-router-dom";
 
 export const Support = () => {
+  const { authState } = useContext(AppContext);
+  const { isAuth } = authState;
+
+  if (!isAuth) {
+    alert("Not Logged In");
+    return <Navigate to="/login" />;
+  }
   return (
     <Box>
       <Box
@@ -31,24 +32,7 @@ export const Support = () => {
           Admin Access
         </Text>
       </Box>
-      <Heading mb={"80px"} color={"#404040"} mt="100px">
-        Enter Details Here...
-      </Heading>
-      <Stack m="auto" w="60%" spacing={3} pb="100px">
-        <Input variant="filled" placeholder="Enter Image URL" />
-        <Input variant="filled" placeholder="Enter Title" />
-        <Input
-          variant="filled"
-          placeholder="Enter Date"
-          type={"datetime-local"}
-        />
-        <Input variant="filled" placeholder="Enter Description" />
-        <Textarea
-          size="md"
-          variant="filled"
-          placeholder="Enter the Article Data"
-        />
-      </Stack>
+      <AddBlog />
     </Box>
   );
 };
