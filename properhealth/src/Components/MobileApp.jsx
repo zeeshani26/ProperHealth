@@ -28,20 +28,22 @@ export default function MobileApp() {
             {/* Passed as array to make it responsice to screen change */}
             Track your calories, exercise, biometrics and health data.
           </Text>
-          <Box
-            marginTop="42px"
-            width="280px"
-            borderRadius="10px"
-            color="white"
-            backgroundColor="#FF763F"
-            fontSize="lg"
-            fontWeight="600"
-            pt="15px"
-            pb="15px"
-            _hover={{ boxShadow: "2xl", cursor: "pointer" }}
-          >
-            Sign Up - It's Free!
-          </Box>
+          <Link to="/signup">
+            <Box
+              marginTop="42px"
+              width="280px"
+              borderRadius="10px"
+              color="white"
+              backgroundColor="#FF763F"
+              fontSize="lg"
+              fontWeight="600"
+              pt="15px"
+              pb="15px"
+              _hover={{ boxShadow: "2xl", cursor: "pointer" }}
+            >
+              Sign Up - It's Free!
+            </Box>
+          </Link>
           <Box textAlign="left" mt="42px" color="#4F4F52">
             <Text fontSize="xl">
               Already have an account?

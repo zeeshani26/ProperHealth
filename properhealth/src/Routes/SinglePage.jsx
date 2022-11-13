@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getSingleData } from "../api/api";
 import React from "react";
 import { Box, Text, Image, Heading } from "@chakra-ui/react";
+import MobileApp from "../Components/MobileApp";
 
 const SinglePage = () => {
   const { article } = useParams();
@@ -42,6 +43,9 @@ const SinglePage = () => {
           </Text>
         </Box>
       </Box>
+      <br></br>
+      <br></br>
+      <MobileApp />
     </Box>
   );
 };
