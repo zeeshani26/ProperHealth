@@ -1,3 +1,2 @@
 # unnatural-throat-9914
-A Basic React Project
-Deployed URL : https://properhealth.netlify.app
+An individual React Project made within 6 days using Chakra UI, Axios and vercel server.
