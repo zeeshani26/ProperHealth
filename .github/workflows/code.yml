@@ -4,22 +4,22 @@ on:
   push:
   
   pull_request:
-    branches:
-      -main
+     branches:
+       - main
 
 
 jobs:
   build:
-     name: Build
-     runs-on: ubuntu-latest
+    name: Build
+    runs-on: ubuntu-latest
 
-     steps:
+    steps:
       - name: Checkout code
-        uses: actions/checout@v3
+        uses: actions/checkout@v3
       - name: Install Node 16
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+           node-version: 16.x
       - name: Install dependencies
         run: npm i
       - name: build project
@@ -27,21 +27,22 @@ jobs:
       - name: Upload artifact in order to deploy
         uses: actions/upload-artifact@v2
         with:
-          path: ./build
+	   name: production-files
+           path: ./build
   deploy:
     name: deploy
     runs-on: ubuntu-latest
     needs: build
 	 
-	  steps:
+    steps:
       - name: Download artifact
-	      uses: actions/download-artifact@v2
-	      with:
+	uses: actions/download-artifact@v2
+	with:
           name: production-files
-	        path: ./build
+	  path: ./build
 
       - name: Deploy to github pages
-	      uses: peaceiris/action-gh-pages@v3
-	      with:
+	uses: peaceiris/action-gh-pages@v3
+	with:
           github_token: ${{secrets.TOKEN}} 
-	        publish_dir: ./build
+	  publish_dir: ./build
