@@ -19,7 +19,7 @@ For Creating the Web Application I used Reactjs, Chakra, Css and Javascript.
 
 ## Landing page
 
-![Screenshot (255)](https://zeeshan-ilahi.imgbb.com/)
+<img src="https://zeeshan-ilahi.imgbb.com/"/>
 ### This is the landing page of our website
 
 
