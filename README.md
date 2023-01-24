@@ -15,8 +15,6 @@ For Creating the Web Application I used Reactjs, Chakra, Css and Javascript.
 
 # Hi, I'm Zeeshan! 👋
 
-#Frontend
-
 ## Landing page
 
 ![Screenshot (255)](https://i.ibb.co/zn6jTXN/Proper-Health-5f8733778ec5beaa8de6.png)
