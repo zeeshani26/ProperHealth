@@ -19,7 +19,8 @@ For Creating the Web Application I used Reactjs, Chakra, Css and Javascript.
 
 ## Landing page
 
-<img src="https://ibb.co/J5z6nHf"/>
+![Screenshot (255)](https://ibb.co/1vzhtrb)
+
 ### This is the landing page of our website
 
 
